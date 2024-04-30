@@ -415,9 +415,9 @@
     --header-logo-link-top: -1rem;
     --header-logo-link-left: 0;
 /* transtion */
---transition-duration: .3s;
---transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
-}
+    --transition-duration: .3s;
+    --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
+    }
   
   * {
       box-sizing: border-box;
@@ -488,7 +488,7 @@
       background-color: var(--color-white);
       width: 0;
       height: 0.2rem;
-      transition: var(–transition-duration) var(transition-cubic-bezier);
+      transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
   
   .nav .nav-item:hover .nav-link::before {
@@ -534,7 +534,6 @@
   
   /* a {
     color: #161616;
-    color: var(--text-color);
     text-decoration: none;
   } */
   
@@ -649,11 +648,14 @@
       text-decoration: none;
   }
   
-  .card-work .card-outer {
+  .card-work .card-outer{
     position: relative;
     overflow: hidden;
   }
   
+  .card-work:hover .card-outer{
+      transform: scale(0.95);
+  }
   .card-work .card-image img{
     height: 30rem;
     width: 100%;
@@ -667,17 +669,18 @@
     left: -0.1rem;
     right: -0.1rem;
     z-index: 1;
-    transition: var(–transition-duration) var(transition-cubic-bezier);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
   
   .card-work:hover .card-inner{
     background-color: rgba(0, 0, 0, 0.7)
   }
 
-  .card-work:hover .card-image {
+  .card-work:hover .card-image{
     transform: scale(1.2);
     transition: var(--transition-duration) var(--transition-cubic-bezier);
   }
+
 
   .card-work .card-title{
     text-align: center;
